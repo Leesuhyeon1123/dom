@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Event객체 : mouse hover했을때 이미지 변경</title>
+  </head>
+  <body>
+    <div id="container">
+      <img src="images/boy.jpg" alt="이미지" id="cover" />
+    </div>
+    <script>
+      const cover = document.querySelector("#cover");
+      cover.addEventListener("mouseover", function () {
+        cover.src = "images/girl.jpg";
+      });
+      // 되돌리기
+      cover.addEventListener("mouseout", function () {
+        cover.src = "images/boy.jpg";
+      });
+    </script>
+  </body>
+</html>
